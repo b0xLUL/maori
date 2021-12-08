@@ -1,10 +1,10 @@
 {
-  "name": " ",
+  "name": "Maorische Filosofie",
   "version": "0.0.1",
   "description": "",
-  "keywords": "",
+  "keywords": [],
   "license": "",
-  "author": "",
+  "author": "Mels Ubbink, Robin van Geemen, Bo van Beest, Boris",
   "scripts": {
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",
