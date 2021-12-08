@@ -11,12 +11,12 @@ const onUpload = async () => {
 
         console.log("[FETCH]: Fetching from Database");
         try {
-            const output = await uploadSchema.findOne(({/*TODO: Hoe gaan we de zin zoeken om te fetchen?*/})).catch(error => {
+            const output = await uploadSchema.findOne(({/*TODO: Hoe gaan we de zin zoeken om te fetchen? - Mels*/})).catch(error => {
                 console.error(error)
             });
 
             if(!output) {
-                // TODO: Een "Couldn't find this" Error message voor op de website toevoegen.
+                // TODO: Een "Couldn't find this" Error message voor op de website toevoegen. - Mels
                 console.log("[FETCH]: Couldn't find the sentence..")
                 return;
             }
@@ -29,7 +29,7 @@ const onUpload = async () => {
     let originalSentence = data[0]
     let maoriSentence = data[1]
 
-//    TODO: Het weergeven van de zin(nen)
+//    TODO: Het weergeven van de zin(nen) - Mels
 };
 
 onUpload()
