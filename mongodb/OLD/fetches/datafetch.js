@@ -1,5 +1,5 @@
 // const mongoose = require("mongoose")
-const mongo = require("../../js/mongo.js")
+const mongo = require("../../../js/OLD JS MONGO/mongo.js")
 const uploadSchema = require("../schemas/upload-schema.js")
 import mongoose from "mongoose"
 // import mongo from "./mongo.js"
@@ -7,7 +7,7 @@ import mongoose from "mongoose"
 
 const onUpload = async () => {
 
-    await mongo().then(async (mongoose) => {
+    await exports().then(async (mongoose) => {
 
         console.log("[FETCH]: Fetching from Database");
         try {
@@ -29,7 +29,8 @@ const onUpload = async () => {
     let originalSentence = data[0]
     let maoriSentence = data[1]
 
-//    TODO: Het weergeven van de zin(nen) - Mels
 };
 
 onUpload()
+
+//    TODO: Het weergeven van de zin(nen) - Mels
