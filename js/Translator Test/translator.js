@@ -48,7 +48,7 @@ const spec_langs = ['am', 'ar', 'hy', 'be', 'bg', 'zh-cn', 'zh-tw', 'ka', 'el', 
 function translator() {
 
     var prompt = document.getElementsByName('prompt_input')[0].value;
-    if (prompt.length > 12) {
+    if (prompt.length > 500) {
         return;
     }
     
