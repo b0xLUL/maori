@@ -116,7 +116,8 @@ control over the UI of a saved site or web app on a mobile device.
 It's linked to from the HTML as follows:
 
 ```html
-<link rel="manifest" href="site.webmanifest">
+
+<link rel="manifest" href="../site.webmanifest">
 ```
 
 Our
@@ -166,9 +167,9 @@ it before the other scripts in the bottom of the page:
 
 ```html
 
-<script src="js/vendor/modernizr-3.10.0.min.js"></script>
+<script src="../js/vendor/modernizr-3.10.0.min.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js"></script>
-<script src="js/plugins.js"></script>
+<script src="../js/plugins.js"></script>
 <script src="../js/OLD%20JS/main.js"></script>
 </body>
 ```

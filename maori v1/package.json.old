@@ -1,0 +1,21 @@
+{
+  "name": "maorische-filosofie",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "license": "",
+  "author": "Mels Ubbink, Robin van Geemen, Bo van Beest, Boris",
+  "scripts": {
+    "build": "parcel build index.html",
+    "dev": "parcel index.html --open",
+    "start": "npm run build && npm run dev"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^4.2.2",
+    "uuid": "^8.3.2"
+  }
+}
