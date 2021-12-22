@@ -1,5 +1,0 @@
-Mels:
-- Errors fixen MongoDB Connectie (mogelijk even pieter vragen, weirde error)
-
-Robin:
-- Errors fixen maori translate
