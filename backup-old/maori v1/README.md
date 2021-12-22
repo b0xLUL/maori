@@ -1,0 +1,2 @@
+# maori
+Maorische Filosofie

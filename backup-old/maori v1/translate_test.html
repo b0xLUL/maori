@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Import the webpage's javascript file -->
+    <script src="js/Translator%20Test/webtest.js" defer></script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content" role="main">
+        
+        <label for="">Prompt: </label><input type="textbox" name="prompt_input" maxlength="500"></input><br>
+        <label for="">Degree: </label><input type="textbox" name="degree_input" maxlength="2" value="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"></input><br>
+        <button onClick="trans()">Translate:</button><br>
+        <label for="output">Output: </label><textarea rows="4" cols="50" name="output"></textarea>
+        
+        
+      </div>
+    </footer>
+  </body>
+</html>
