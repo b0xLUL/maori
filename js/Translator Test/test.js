@@ -45,26 +45,34 @@ var rl = readline.createInterface({
 //         return 0;
 //     }
 // };
+function translate(prompt, degree, language_list) {
+    current_prompt = prompt;
 
-function translation_loop() {         
-    var i = 1;
-    setTimeout(function() {   
+    function translation_loop() {         
+        var i = 1;
+        setTimeout(function() {   
+            next_lang = language_list[i]
 
-        // translateText('Oggi è lunedì', 'en')
-        //     .then((res) => {
-        //         console.log(res);
-        //     })
-        //     .catch((err) => {
-        //         console.log(err);
-        //     });
-      
-        i++;                    
-        if (i < 10) {           
-            translation_loop();              
-         }            
+            translateText(prompt, next_lang)
+                .then((res) => {
+                    current_prompt = res
+                    console.log(res);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        
+            i++;                    
+            if (i < degree) {           
+                translation_loop();              
+            }            
 
-    }, 3000)
+        }, 3000)
+    }
+
+    translation_loop()
 }
+
 // all languages
 const langs = ['af', 'sq', 'am', 'ar', 'hy', 'az', 'eu', 'be', 'bn', 'bs', 'bg', 'ca', 'ny', 'co', 'hr', 'cs', 'da', 'nl', 'en', 'eo', 'et', 'tl', 'fi', 'fr', 'fy', 'gl', 'ka', 'de', 'el', 'gu', 'ht', 'ha', 'iw', 'he', 'hi', 'hu', 'is', 'ig', 'id', 'ga', 'it', 'ja', 'jw', 'kn', 'kk', 'km', 'ko', 'ku', 'ky', 'lo', 'la', 'lv', 'lt', 'lb', 'mk', 'mg', 'ms', 'ml', 'ro', 'ru', 'sm', 'gd', 'sr', 'st', 'sn', 'sd', 'si', 'sk', 'sl', 'so', 'es', 'su', 'sw', 'sv', 'tg', 'ta', 'te', 'th', 'tr', 'uk', 'ur', 'ug', 'uz', 'vi', 'cy', 'xh', 'yi', 'yo', 'zu'];
 
@@ -75,18 +83,25 @@ const spec_langs = ['am', 'ar', 'hy', 'be', 'bg', 'zh-cn', 'zh-tw', 'ka', 'el', 
 const wait_time = 3;
 
 // vraag gebruiker graad van vervorming
-const degree = rl.question('Graad van vervorming: ');
+rl.question('Graad van vervorming: ', function (degree) {
 
-// vraag gebruiker wat te maorificeren
-const prompt = rl.question('\nInput: ');
+    // vraag gebruiker voor een prompt om te translaten
+    rl.question('Input: ', function (prompt) {
 
-// maak languages lijst om de input door al die talen heen te halen
-language_list = ['mi']
-for (let i = 0; i < degree; i++) {
-    language_list = language_list + [spec_langs[Math.floor(Math.random()*length(spec_langs))]];
-}
+        // maak languages lijst om de input door al die talen heen te halen
+        language_list = ['mi']
+         for (let i = 1; i < degree; i++) {
+             language_list.push(spec_langs[Math.floor(Math.random()*(spec_langs).length)]);
+         }
+        console.log(language_list);
+        
+        translate(prompt, degree)
+         
+        rl.close();      
+    });
+});
 
-console.log(language_list);
+
 
 // translateText('Oggi è lunedì', 'en')
 //     .then((res) => {
