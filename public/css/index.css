@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    min-height: 8vh;
+    background: #03fca1;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 22px;
+}
+
+/*CSS for the Logo Image*/
+.logo img{
+    margin-left: -400px;
+    width: 100px;
+    height: 100px;
+}
+
+.list{
+
+}
