@@ -7,62 +7,62 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <script src="../js/html_javascript_test.js" defer></script>
 </head>
+    <body>
+        <div id="container"> <!-- Ik gebruik de 'container' om alles in z'n geheel te kunnen verschuiven. -->
+            <div id="header">
+                <h1>Maorische filosofie</h1>
+            </div>
+            <div id="content">
+                <div id="nav">
+                    <ul>
+                        <li>Home</li>
+                        <br>
+                        <li><a href="spel_1.html">Spel 1</a></li>
+                        <br>
+                        <li>Spel 2</li>
+                        <br>
+                        <li>Spel 3</li>
+                        <br>
+                    </ul>
+                </div>
 
-<body>
-    <div id="container"> <!-- Ik gebruik de 'container' om alles in z'n geheel te kunnen verschuiven. -->
-        <div id="header">
-            <h1>Maorische filosofie</h1>
-        </div>
-        <div id="content"> 
-            <div id="nav">
-                <ul>
-                    <li>Home</li>
-                    <br>
-                    <li><a href="spel_1.html">Spel 1</a></li>
-                    <br>
-                    <li>Spel 2</li>
-                    <br>
-                    <li>Spel 3</li>
-                    <br>
-                </ul>
+                <div id="main">
+                    <h2>Home</h2>
+
+                    <p>
+                        <label for="input">Input:</label>
+                        <input type="text" id="input" name="input">
+                        <br><br>
+                        <label for="gvv">GGV:</label>
+                        <input type="range" id="gvv" name="gvv" min="1" max="5" step="1">
+                        <br><br>
+                        <input type="submit" onclick="translator()">
+                        <br><br>
+                        <label for="output">Output:</label>
+                        <br>
+                        <output id="output" name="output"></output>
+                        <br><br><br><br><br><br><br><br><br><br>
+                    </p>
+                    <img src="../Maori_Logo.png" alt="niet geladen" width="150" height="150" />
+                    <h4>Hoe te gebruiken:</h4>
+                    <p>
+                        <ol>
+                        <li>Voer de zin in die je graag gemaorifeerd zou willen hebben. </li>
+                        <li>Pas vervolgens de graad van vervorming (GVV) aan naar wens. <br>
+                            Hoe hoger, hoe gemaorificeerder de zin.</li>
+                        <li>Geniet van de gemaorificeerde tekst! :)</li>
+                        </ol>
+                    </p>
+                </div>
             </div>
 
-            <div id="main">
-                <h2>Home</h2>
-
-                <p> 
-                    <label for="input">Input:</label>
-                    <input type="text" id="input" name="input">
-                    <br><br>
-                    <label for="gvv">GGV:</label>
-                    <input type="range" id="gvv" name="gvv" min="1" max="5" step="1">
-                    <br><br>
-                    <input type="submit" onclick="translator()">
-                    <br><br>
-                    <label for="output">Output:</label>
-                    <br>
-                    <output id="output" name="output"></output>
-                    <br><br><br><br><br><br><br><br><br><br>
-                </p>
-                <img src="../Maori_Logo.png" alt="niet geladen" width="150" height="150" />
-                <h4>Hoe te gebruiken:</h4>
-                <p>
-                    <ol>
-                    <li>Voer de zin in die je graag gemaorifeerd zou willen hebben. </li>
-                    <li>Pas vervolgens de graad van vervorming (GVV) aan naar wens. <br>
-                        Hoe hoger, hoe gemaorificeerder de zin.</li>
-                    <li>Geniet van de gemaorificeerde tekst! :)</li>
-                    </ol>
-                </p>
+            <div id="footer">
+                Copyright &copy; 2022
+                <br>
+                Team Maorische Filosofie
+            </div>
         </div>
 
-        <div id="footer"> 
-            Copyright &copy; 2022 
-            <br>
-            Team Maorische Filosofie 
-        </div>
-    </div>
-
-</body>
+    </body>
 </html>
 
