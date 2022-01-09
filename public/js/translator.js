@@ -49,7 +49,7 @@ function translator() {
 
     // haal input van de html pagina
     var prompt = document.getElementsByName('input')[0].value;
-    if (prompt.length > 500) {
+    if (prompt.length > 300) {
         return;
     }
     
@@ -58,7 +58,7 @@ function translator() {
     if (isNaN(gvv)) {
         return;
     }
-    else if (gvv > 10) {
+    else if (gvv > 5) {
         return;
     }
 
@@ -90,7 +90,7 @@ function translator() {
             
             // zorgt voor de loop
             i++;                    
-            if (i < gvv) {           
+            if (i < gvv && current_prompt.length <= 500) {           
                 translation_loop();              
             }        
         // wacht tussen translates 3 seconden    
@@ -101,5 +101,3 @@ function translator() {
     var out = current_prompt
     document.getElementsByName('output')[0].value= out;
 }
-
-translator()
