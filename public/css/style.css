@@ -17,7 +17,6 @@ body{
 #container{
     background-color: white;
     width: 1000px;
-    height: 600px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -49,9 +48,5 @@ img{
     text-align: right;
     clear: both;
     padding: 10px;
-    background-color: white;
-    position: fixed;
-    bottom: 110px;
-    right: 18%;
-    
+    background-color: white;    
 }
