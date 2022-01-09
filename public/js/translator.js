@@ -47,22 +47,24 @@ const spec_langs = ['am', 'ar', 'hy', 'be', 'bg', 'zh-cn', 'zh-tw', 'ka', 'el', 
 
 function translator() {
 
-    var prompt = document.getElementsByName('prompt_input')[0].value;
+    // haal input van de html pagina
+    var prompt = document.getElementsByName('input')[0].value;
     if (prompt.length > 500) {
         return;
     }
     
-    var degree = document.getElementsByName('degree_input')[0].value;
-    if (isNaN(degree)) {
+    // haal de graad van vervorming van de html pagina
+    var gvv = document.getElementsByName('gvv')[0].value;
+    if (isNaN(gvv)) {
         return;
     }
-    else if (degree > 10) {
+    else if (gvv > 10) {
         return;
     }
 
     // maak languages lijst om de input door al die talen heen te halen
     language_list = ['mi']
-    for (let list_pos = 1; list_pos < degree; list_pos++) {
+    for (let list_pos = 1; list_pos < gvv; list_pos++) {
         language_list.push(spec_langs[Math.floor(Math.random()*(spec_langs).length)]);
     }
     language_list.push('mi', 'nl');
@@ -88,7 +90,7 @@ function translator() {
             
             // zorgt voor de loop
             i++;                    
-            if (i < degree) {           
+            if (i < gvv) {           
                 translation_loop();              
             }        
         // wacht tussen translates 3 seconden    
