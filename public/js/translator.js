@@ -86,4 +86,4 @@ async function translator(){
     }
 }
 
-translator()
+//translator()
