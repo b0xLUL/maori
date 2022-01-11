@@ -50,3 +50,11 @@ img{
     padding: 10px;
     background-color: white;    
 }
+
+textarea {
+    width: 30%;
+    height: 100px;
+    max-width: 60%; 
+    max-height: 300px;
+    font-family: Calibri, Arial, Helvetica
+}
