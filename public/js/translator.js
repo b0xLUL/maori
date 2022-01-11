@@ -31,7 +31,7 @@ const translateText = async (text, targetLanguage) => {
 // special languages only
 const spec_langs = ['am', 'ar', 'hy', 'be', 'bg', 'zh', 'zh-TW', 'ka', 'el', 'gu', 'he', 'hi', 'ig', 'ja', 'kn', 'kk', 'km', 'ko', 'ky', 'lo', 'my', 'ml', 'mn', 'mr', 'ml', 'ne', 'or', 'ps', 'fa', 'pa', 'ru', 'sr', 'sd', 'si', 'tg', 'ta', 'te', 'th', 'uk', 'ur', 'ug', 'yi'];
 
-async function translate_test(){
+async function translator(){
     // let prompt = 'Dit is een test van de maorische translator'
     // let gvv = 3
 
@@ -58,7 +58,9 @@ async function translate_test(){
     // voeg als laatste nederlands toe aan de lijst om terug naar het nederlands te vertalen
     language_list.push('nl')
 
+    console.log('\n')
     console.log(language_list)
+    console.log(`begin zin: ${prompt}\n`)
 
     let temp_prompt = prompt
 
@@ -80,4 +82,4 @@ async function translate_test(){
     }
 }
 
-// translate_test()
+translator()
