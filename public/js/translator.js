@@ -30,11 +30,15 @@ async function translator(){
     };
 
     // special languages only
-        const spec_langs = ['am', 'ar', 'hy', 'be', 'bg', 'zh', 'zh-TW', 'ka', 'el', 'gu', 'he', 'hi', 'ig', 'ja', 'kn', 'kk', 'km', 'ko', 'ky', 'lo', 'my', 'ml', 'mn', 'mr', 'ml', 'ne', 'or', 'ps', 'fa', 'pa', 'ru', 'sr', 'sd', 'si', 'tg', 'ta', 'te', 'th', 'uk', 'ur', 'ug', 'yi'];
+    const spec_langs = ['am', 'ar', 'hy', 'be', 'bg', 'zh', 'zh-TW', 'ka', 'el', 'gu', 'he', 'hi', 'ig', 'ja', 'kn', 'kk', 'km', 'ko', 'ky', 'lo', 'my', 'ml', 'mn', 'mr', 'ml', 'ne', 'or', 'ps', 'fa', 'pa', 'ru', 'sr', 'sd', 'si', 'tg', 'ta', 'te', 'th', 'uk', 'ur', 'ug', 'yi'];
+
+
 
     let prompt = 'Dit is een test van deze maori vertaler, deze zin wordt vetaald door meerdere talen'
     // De mooie website wilde niet kletsen met de vertaal code, dat is zeer teleurstellend.
     let gvv = 5
+
+
 
     // // haal input van de html pagina
     // let prompt = document.getElementsByName('input')[0].value;
@@ -86,4 +90,4 @@ async function translator(){
     }
 }
 
-//translator()
+translator()
