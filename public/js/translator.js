@@ -32,13 +32,9 @@ async function translator(){
     // special languages only
     const spec_langs = ['am', 'ar', 'hy', 'be', 'bg', 'zh', 'zh-TW', 'ka', 'el', 'gu', 'he', 'hi', 'ig', 'ja', 'kn', 'kk', 'km', 'ko', 'ky', 'lo', 'my', 'ml', 'mn', 'mr', 'ml', 'ne', 'or', 'ps', 'fa', 'pa', 'ru', 'sr', 'sd', 'si', 'tg', 'ta', 'te', 'th', 'uk', 'ur', 'ug', 'yi'];
 
-
-
-    let prompt = 'Dit is een test van deze maori vertaler, deze zin wordt vetaald door meerdere talen'
-    // De mooie website wilde niet kletsen met de vertaal code, dat is zeer teleurstellend.
+    let prompt = 'De zwaluw verslikt zich in een banaan en wordt een geit'
+    
     let gvv = 5
-
-
 
     // // haal input van de html pagina
     // let prompt = document.getElementsByName('input')[0].value;
@@ -63,9 +59,8 @@ async function translator(){
     // voeg als laatste nederlands toe aan de lijst om terug naar het nederlands te vertalen
     language_list.push('nl')
 
-    console.log('\n')
+    console.log(`\nbegin zin:\n${prompt}\n`)
     console.log(language_list)
-    console.log(`begin zin: ${prompt}\n`)
 
     let temp_prompt = prompt
 
@@ -88,6 +83,7 @@ async function translator(){
             break
         }
     }
+    return;
 }
 
 translator()
